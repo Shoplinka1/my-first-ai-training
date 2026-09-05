@@ -1,0 +1,15 @@
+{
+  "name": "My First AI v5 BPE training manifest",
+  "architecture": "my-first-transformer-v5-bpe",
+  "parameterCount": 345088,
+  "tokenizer": "BPE UTF-8 byte-base",
+  "vocab": 1024,
+  "context": 256,
+  "dModel": 64,
+  "layers": 4,
+  "ff": 256,
+  "checkpointFormat": "PyTorch .pt",
+  "entrypoint": "training/prepare_data.py then training/train.py",
+  "gpu": "CUDA when available",
+  "status": "ready-to-run"
+}

@@ -1,0 +1,2 @@
+My First AI source snapshot: AppDeploy app my-first-ai-7jcz6l, version 1788630642621.
+Packaged from the current deployed AppDeploy source snapshot.

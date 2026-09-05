@@ -1,0 +1,41 @@
+# Tests
+
+## Test 1 - Train and persist the hosted Transformer [sanity]
+Viewport: desktop
+Covers: model training, mini-batch optimization, persisted checkpoint, model metrics
+Description: Verifies the existing training workflow still trains the hosted model and persists its metrics.
+Steps:
+1. Open the training dashboard
+2. Submit the available training corpus
+3. Refresh the page after training completes
+Expected: The dashboard shows updated training metrics and the trained model remains available.
+
+## Test 2 - Generate from the trained model
+Viewport: desktop
+Covers: model generation, hosted inference, generated response rendering
+Description: Verifies the trained model can be queried from the dashboard without a developer API key.
+Steps:
+1. Enter a short prompt in the model test area
+2. Run generation
+3. Inspect the generated text
+Expected: Generated text is rendered in the dashboard without an authentication error.
+
+## Test 3 - Create and use a developer API key
+Viewport: desktop
+Covers: API key creation, authenticated /api/v1/generate access, developer response rendering
+Description: Verifies a developer can create a key and use it to call the model API.
+Steps:
+1. Create a developer API key
+2. Run the API test using that key
+3. Inspect the response
+Expected: The API test succeeds and returns generated text.
+
+## Test 4 - Reject an unauthenticated developer API request
+Viewport: mobile
+Covers: API authentication guardrail, unauthorized /api/v1/generate failure
+Description: Verifies the public developer endpoint does not allow requests without credentials.
+Steps:
+1. Open the API test area
+2. Attempt a developer API request without a key
+3. Inspect the error state
+Expected: A visible authentication error is shown and no generated response is returned.

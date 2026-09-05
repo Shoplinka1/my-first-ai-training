@@ -1,0 +1,7 @@
+{
+  "architecture": "v5-bpe",
+  "tokenizer": {"type": "BPE over UTF-8 bytes", "baseVocab": 256, "targetVocab": 1024},
+  "model": {"dModel": 64, "layers": 4, "context": 256, "ff": 256},
+  "optimizer": {"type": "AdamW", "learningRate": 0.0003, "gradientClip": 1},
+  "training": {"batchSize": 32, "mixedPrecision": "float16 on CUDA", "checkpoint": "PyTorch .pt"}
+}
